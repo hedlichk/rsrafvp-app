@@ -16,36 +16,43 @@
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="main.html" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;">R-SRAFVP Toolkit</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;">Security Rule</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;">Privacy Rule</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;">About App</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;">About App</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div>
             <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link active" role="tab" data-bs-toggle="tab" href="#tab-1">Info</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-2">Questions</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-3">Score</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link" role="tab" data-bs-toggle="tab" href="#tab-4">Answer Help</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" href="#tab-1" style="font-size: 12px;">Info</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" href="#tab-2" style="font-size: 12px;">Questions</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link active link-light" role="tab" data-bs-toggle="tab" href="#tab-3" style="font-size: 12px;">Score</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" href="#tab-4" style="font-size: 12px;">Answer Help</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" role="tabpanel" id="tab-1">
-                    <p style="margin-top: 16px;">Fill in the following information.</p><label class="form-label d-inline-block" style="text-align: left;font-size: 14px;min-width: 49%;">Assessment Date</label><input class="d-inline-block" type="date" required="" value="now()" step="1" style="min-width: 50%;"><label class="form-label d-inline-block" style="margin-top: 3px;font-size: 14px;min-width: 49%;">Assessment type</label><select class="d-inline-block" style="margin-top: 3px;font-size: 14px;min-width: 50%;" name="typeAssessment" value="Initial">
-                        <optgroup label="This is a group">
+                <div class="tab-pane" role="tabpanel" id="tab-1">
+                    <p style="margin-top: 16px;">Fill in the following information.</p><label class="form-label d-block" style="text-align: left;font-size: 14px;margin-top: 3px;">Therapist</label><input class="d-block" type="text" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;font-size: 14px;min-width: 100%;margin-top: 3px;" placeholder="{enter therapist's name here}" name="fldTherapist"><label class="form-label d-block" style="text-align: left;margin-top: 12px;font-size: 14px;">Client Reference</label><input class="d-block" type="text" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;margin-top: 3px;font-size: 14px;min-width: 100%;" placeholder="{MRN, name, any client reference info}" name="fldClient"><label class="form-label d-inline-block" style="text-align: left;font-size: 14px;min-width: 49%;margin-top: 12px;">Assessment Date</label><input class="d-inline-block float-end" type="date" required="" value="now()" step="1" style="min-width: 50%;margin-top: 12px;font-size: 14px;" name="fldAssessDate"><label class="form-label d-inline-block" style="margin-top: 3px;font-size: 14px;min-width: 49%;">Assessment type</label><select class="d-inline-block float-end" style="margin-top: 3px;font-size: 14px;min-width: 50%;" name="fldAssessType" value="Initial">
+                        <optgroup label="">
                             <option value="12" selected="">Initial</option>
                             <option value="13">Progress</option>
                             <option value="14">Discharge</option>
                         </optgroup>
-                    </select><label class="form-label d-block" style="text-align: left;margin-top: 3px;font-size: 14px;">Assessment Location</label><input class="d-inline-block" type="text" placeholder="{state / province}" style="margin-top: 3px;font-size: 14px;min-width: 50%;" name="fldStateProv"><input class="d-inline-block" type="text" placeholder="{country}" style="margin-top: 3px;font-size: 14px;min-width: 50%;" name="fldCountry"><label class="form-label d-block" style="text-align: left;font-size: 14px;margin-top: 3px;">Therapist</label><input class="d-block" type="text" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;font-size: 14px;min-width: 100%;margin-top: 3px;" placeholder="{enter therapist's name here}" name="fldTherapist"><label class="form-label d-block" style="text-align: left;margin-top: 3px;font-size: 14px;">Client Reference</label><input class="d-block" type="text" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;margin-top: 3px;font-size: 14px;min-width: 100%;" placeholder="{MRN, name, any client reference info}" name="fldClient"><label class="form-label d-inline-block" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Client Age</label><input class="d-inline-block" type="number" min="0" max="120" step="1" placeholder="{enter age number}" style="min-width: 50%;margin-top: 3px;font-size: 14px;">
-                    <p class="d-inline-block" style="min-width: 40%;">Client Gender:</p><label class="form-label d-inline-block" style="min-width: 25%;font-size: 14px;">Female<input class="d-inline-block" type="checkbox" style="font-size: 14px;margin-left: 5px;"></label><label class="form-label d-inline-block" style="min-width: 25%;font-size: 14px;">Male<input type="checkbox" style="font-size: 14px;margin-left: 5px;"></label><label class="form-label d-block" style="text-align: left;min-width: 35%;font-size: 14px;">Client Eye Diagnosis</label><input class="d-block" type="text" placeholder="{enter any eye diagnosis'}" style="min-width: 100%;" name="fldDiagnosis">
+                    </select>
+                    <div class="row">
+                        <div class="col"><label class="form-label d-inline-block" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Assessment Location</label><input type="text" style="font-size: 14px;min-width: 25%;max-width: 25%;" name="fldState" placeholder="{state/prov}"><input type="text" style="font-size: 14px;min-width: 25%;max-width: 25%;" placeholder="{cntry}" name="fldCountry"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><label class="form-label" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Client Age</label><input type="number" min="0" max="120" step="1" placeholder="{enter age number}" style="min-width: 50%;margin-top: 3px;font-size: 14px;" name="fldAge"></div>
+                    </div>
+                    <div class="row" style="max-width: 100%;">
+                        <div class="col">
+                            <p class="d-inline-block float-start" style="margin-top: 6px;font-size: 14px;max-width: 50%;min-width: 50%;">Client Gender:</p><label class="form-label d-inline-block" style="font-size: 14px;min-width: 25%;max-width: 25%;margin-top: 6px;">Female<input type="checkbox" style="font-size: 14px;margin-left: 5px;" name="fldFemale"></label><label class="form-label" style="font-size: 14px;min-width: 25%;max-width: 25%;">Male<input type="checkbox" style="font-size: 14px;margin-left: 5px;margin-top: 6px;" name="fldMale"></label>
+                        </div>
+                    </div><label class="form-label d-block" style="text-align: left;min-width: 35%;font-size: 14px;">Client Eye Diagnosis</label><input class="d-block" type="text" placeholder="{enter any eye diagnosis'}" style="min-width: 100%;" name="fldDiagnosis">
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-2">
                     <p style="margin-top: 16px;">Answer all of the questions.&nbsp; The comments sections are for therapists for any additional information.</p>
                     <h4 style="margin-top: 2%;">Health Management</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;font-size: 14px;">Medication set up<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="Q01" value="na">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;font-size: 14px;">Medication set up<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="A01" value="na">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -55,7 +62,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;">Taking medication<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="Q02" value="na">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;">Taking medication<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="A02" value="na">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -65,7 +72,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;">Obtaining supplies/food<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="Q03" value="na">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;">Obtaining supplies/food<select class="d-inline float-end" style="min-width: 20%;margin-top: 0px;margin-bottom: 3px;font-size: 14px;" name="A03" value="na">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -74,9 +81,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;margin-top: 3px;font-size: 14px;" placeholder="{comments, leave blank if none}" name="healthComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;margin-top: 3px;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteHealth"></textarea>
                     <h4 style="margin-top: 2%;">Personal Grooming</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Dressing<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q04">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Dressing<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A04">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -86,7 +93,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Hair care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q05">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Hair care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A05">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -96,7 +103,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Nail care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q06">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Nail care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A06">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -106,7 +113,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Oral care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q07">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Oral care<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A07">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -115,9 +122,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="personalComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="notePersonal"></textarea>
                     <h4 style="margin-top: 2%;">Meal/Laundry Preparation</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - chop, slice, cut, peel foods<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q08">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - chop, slice, cut, peel foods<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A08">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -127,7 +134,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - pour/measure ingredients<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q09">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - pour/measure ingredients<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A09">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -137,7 +144,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - microwave<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q10">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - microwave<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A10">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -147,7 +154,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - stove burners<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q11">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - stove burners<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A11">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -157,7 +164,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - oven<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q12">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Meal preparation - oven<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A12">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -167,7 +174,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Laundry preparation<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q13">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Laundry preparation<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A13">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -176,9 +183,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="mealComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="noteMealPrep"></textarea>
                     <h4 style="margin-top: 2%;">Financial Management</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Manage records<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q14">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Manage records<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A14">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -188,7 +195,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Accurately read bills/financial statements<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q15">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Accurately read bills/financial statements<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A15">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -198,7 +205,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Write check/money order<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q16">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Write check/money order<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A16">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -207,9 +214,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;font-size: 14px;" placeholder="{comments, leave blank if none}" name="financialComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteFinancial"></textarea>
                     <h4 style="margin-top: 2%;">Using the Telephone</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Physically operate telephone<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q17">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Physically operate telephone<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A17">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -219,7 +226,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Retrieve telephone numbers<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q18">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Retrieve telephone numbers<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A18">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -228,9 +235,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="phoneComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="notePhone"></textarea>
                     <h4 style="margin-top: 2%;">Reading</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">TV guide on TV<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q19">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">TV guide on TV<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A19">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -240,7 +247,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Books<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q20">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Books<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A20">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -250,7 +257,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Labels/instructions<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q21">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Labels/instructions<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A21">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -260,7 +267,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Credit/debit cards<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q22">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Credit/debit cards<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A22">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -269,9 +276,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="readingComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="noteReading"></textarea>
                     <h4 style="margin-top: 2%;">Writing</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible personal list/short note<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q23">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible personal list/short note<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A23">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -281,7 +288,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible address envelope<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q24">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible address envelope<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A24">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -291,7 +298,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible signature<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q25">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Legible signature<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A25">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -300,9 +307,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;margin-bottom: 3px;" placeholder="{comments, leave blank if none}" name="writingComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;margin-bottom: 3px;" placeholder="{comments, leave blank if none}" name="noteWriting"></textarea>
                     <h4 style="margin-top: 2%;margin-bottom: 3px;">Functional Mobility</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Ascend/descend stairs<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q26">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Ascend/descend stairs<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A26">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -312,7 +319,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Adjusts to changes in walking surface<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q27">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Adjusts to changes in walking surface<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A27">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -322,7 +329,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Avoids collisions/tripping<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q28">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Avoids collisions/tripping<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A28">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -332,7 +339,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Locates and reads signs<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q29">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Locates and reads signs<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A29">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -341,9 +348,9 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="functionalComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="noteFunctional"></textarea>
                     <h4 style="margin-top: 2%;">Personal Preference Activities</h4>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;">Shaving<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q30">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;">Shaving<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A30">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -353,7 +360,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Leisure activities<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q31">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Leisure activities<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A31">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -363,7 +370,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Operates devices used for leisure<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="Q32">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Operates devices used for leisure<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;" name="A32">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -373,7 +380,7 @@
                                 <option value="4">4</option>
                             </optgroup>
                         </select></p>
-                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Read timepiece<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="Q33">
+                    <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;">Read timepiece<select class="d-inline float-end" style="min-width: 20%;margin-bottom: 3px;" name="A33">
                             <optgroup label="Answer">
                                 <option value="" selected="">na</option>
                                 <option value="0">0</option>
@@ -382,10 +389,11 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="ppaComments"></textarea>
+                        </select></p><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="notePPA"></textarea>
                 </div>
-                <div class="tab-pane" role="tabpanel" id="tab-3">
+                <div class="tab-pane active" role="tabpanel" id="tab-3">
                     <p style="margin-top: 16px;">Shown here is the score for this assessment based on the answers from the previous tab.</p><label class="form-label d-block" style="font-size: 14px;">Total NA&nbsp;questions<input class="float-end" type="text" readonly="" style="background: #cccccc;font-size: 14px;"></label><label class="form-label d-block" style="font-size: 14px;">Total uncalc'd points<input class="float-end" type="text" readonly="" style="background: #cccccc;font-size: 14px;"></label><label class="form-label d-block" style="font-size: 14px;">Total adjusted points<input class="float-end" type="text" readonly="" style="background: #cccccc;font-size: 14px;"></label><label class="form-label d-block" style="font-size: 14px;">Clients total points<input class="float-end" type="text" readonly="" style="background: #cccccc;font-size: 14px;"></label><label class="form-label d-block" style="font-size: 14px;">R-SRAFVP score<input class="float-end" type="text" readonly="" style="background: #cccccc;"></label><label class="form-label d-block" style="font-size: 14px;">Impairment %<input class="float-end" type="text" readonly="" style="background: #cccccc;"></label><label class="form-label d-block" style="font-size: 14px;">Medicare G-code Modifier<input class="float-end" type="text" readonly="" style="background: #cccccc;"></label><textarea class="d-block" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="ppaComments"></textarea>
+                    <div class="btn-group btn-group-sm" role="group" style="max-width: 100%;min-width: 100%;margin-top: 24px;"><button class="btn btn-primary border rounded-pill" type="button" style="color: #000000;background: #9e9e9e;font-weight: bold;margin-right: 2%;margin-left: 2%;">Reset</button><button class="btn btn-primary border rounded-pill" type="button" style="color: #000000;background: #9e9e9e;font-weight: bold;margin-right: 2%;margin-left: 2%;">Export</button><button class="btn btn-primary border rounded-pill" type="button" style="color: #000000;background: #9e9e9e;font-weight: bold;margin-left: 2%;margin-right: 2%;">Save</button></div>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-4">
                     <p style="margin-top: 16px;">Help to understand how to answer the questions.</p>
