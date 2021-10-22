@@ -1,12 +1,14 @@
-var cacheName = 'rsrafvp-pwa';
+var cacheName = 'rsrafvp';
 var filesToCache = [
     '/',
     'index.html',
     'main.html',
     'myassessment.html',
-    'about.html',
-    'css/style.css',
-    'bootstrap/css/bootstrap.min.css' 
+    'assets/css/style.css',
+    'assets/bootstrap/css/bootstrap.min.css', 
+    'assets/js/index.js',
+    'assets/js/sw.js',
+    'assets/bootstrap/js/bootstrap.min.js' 
 ];
 
 

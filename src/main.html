@@ -1,29 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="home" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>rsrafvp</title>
+    <meta name="theme-color" content="#264391">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/rsrafvp-icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/rsrafvp-icon-512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body style="color: #ffffff;background: #264395;">
     <div class="container" style="max-width: 768px;min-width: 360px;">
         <nav class="navbar navbar-light" style="border-bottom-style: solid;border-bottom-color: #cccccc;max-width: 768px;">
-            <div class="container-fluid"><a class="navbar-brand" href="#" style="font-weight: bold;color: #cccccc;">Username</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: right;border-style: solid;border-color: #cccccc;border-top-left-radius: 4px;background: #cccccc;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid"><a class="navbar-brand" id="fldWhoAmI" href="#" style="font-weight: bold;color: #cccccc;">Username</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: right;border-style: solid;border-color: #cccccc;border-top-left-radius: 4px;background: #cccccc;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
                         <li class="nav-item" id="linkLogin"><a class="nav-link" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;" href="login.html">Login</a></li>
+                        <li class="nav-item" id="linkContact"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="contact.html">Contact Us</a></li>
                         <li class="nav-item" id="linkAbout"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="about.html">About App</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="btn-group-vertical d-block" role="group" style="margin: 36px;padding: 0;border-top-width: 4px;margin-right: 0px;margin-left: 0px;"><a class="btn btn-primary" role="button" id="activeAssessment" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;font-size: 32px;background: #cccccc;color: #000000;font-weight: bold;margin-top: 3%;margin-bottom: 3%;padding-top: 3%;padding-bottom: 3%;" href="myassessment.html">Active Assessment</a><a class="btn btn-primary" role="button" id="savedAssessments" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;padding-top: 3%;padding-bottom: 3%;font-size: 32px;margin-top: 3%;margin-bottom: 3%;color: #000000;font-weight: bold;background: #cccccc;" href="mylisting.html">My Saved Assessments</a><a class="btn btn-primary" role="button" id="allAssessments" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;padding-top: 3%;padding-bottom: 3%;font-size: 32px;margin-top: 3%;margin-bottom: 3%;background: #cccccc;color: #000000;font-weight: bold;" href="allassessments.html">All Assessments</a></div>
+        <div class="btn-group-vertical d-block" role="group" style="margin: 36px;padding: 0;border-top-width: 4px;margin-right: 0px;margin-left: 0px;"><a class="btn btn-primary" role="button" id="activeAssessment" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;font-size: 32px;background: #cccccc;color: #000000;font-weight: bold;margin-top: 3%;margin-bottom: 3%;padding-top: 3%;padding-bottom: 3%;" href="myassessment.html">Active Assessment</a><a class="btn btn-primary disabled" role="button" id="savedAssessments" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;padding-top: 3%;padding-bottom: 3%;font-size: 32px;margin-top: 3%;margin-bottom: 3%;color: #000000;font-weight: bold;background: #cccccc;" href="mylisting.html">My Saved Assessments</a><a class="btn btn-primary disabled active" role="button" id="allAssessments" style="border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;padding-top: 3%;padding-bottom: 3%;font-size: 32px;margin-top: 3%;margin-bottom: 3%;background: #cccccc;color: #000000;font-weight: bold;" href="allassessments.html">All Assessments</a></div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
