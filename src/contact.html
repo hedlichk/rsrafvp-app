@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>rsrafvp</title>
     <meta name="theme-color" content="#264391">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/rsrafvp-icon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/img/rsrafvp-icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/img/rsrafvp-icon-512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -13,10 +14,11 @@
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/print.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body style="color: #ffffff;background: #264391;text-align: left;">
+<body id="pgContact" style="color: #ffffff;background: #264391;text-align: left;">
     <div class="container" style="max-width: 768px;min-width: 360px;">
         <nav class="navbar navbar-light" style="border-bottom-style: solid;border-bottom-color: #cccccc;">
             <div class="container-fluid"><a class="navbar-brand" id="fldWhoAmI" href="#" style="font-weight: bold;color: #cccccc;">Username</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: right;border-style: solid;border-color: #cccccc;border-top-left-radius: 4px;background: #cccccc;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -43,7 +45,7 @@
                         </optgroup>
                     </select></div>
                 <div class="mb-3"><textarea class="form-control" name="message" placeholder="Message" rows="14" required="" style="font-weight: bold;color: #000000;" maxlength="256" minlength="6"></textarea></div>
-                <div class="text-center mb-3"><button class="btn border rounded border-dark shadow" type="submit" style="padding-right: 48px;padding-left: 48px;border-width: 0px;border-style: none;color: #000000;font-weight: bold;background: #cccccc;border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;">send </button></div>
+                <div class="text-center mb-3"><button class="btn border rounded border-dark shadow" id="btnSend" type="submit" style="padding-right: 48px;padding-left: 48px;border-width: 0px;border-style: none;color: #000000;font-weight: bold;background: #cccccc;border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;margin-right: 48px;">send </button><a class="btn border rounded border-dark shadow" role="button" id="btnClose" href="main.html" style="padding-right: 48px;padding-left: 48px;border-width: 0px;border-style: none;color: #000000;font-weight: bold;background: #cccccc;border-top-left-radius: 12px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;border-bottom-left-radius: 12px;margin-left: 48px;">Close</a></div>
             </form>
         </section>
     </div>
@@ -51,6 +53,9 @@
     <script src="assets/js/smart-forms.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/print.min.js"></script>
+    <script src="assets/js/require.js"></script>
+    <script src="assets/js/whoami.js"></script>
 </body>
 
 </html>

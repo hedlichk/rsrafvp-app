@@ -1,3 +1,4 @@
+
 document.getElementById("activeAssessment").addEventListener("click", navAssessment);
 document.getElementById("savedAssessments").addEventListener("click", navSavedAssessments);
 document.getElementById("allAssessments").addEventListener("click", navAllAssessments);

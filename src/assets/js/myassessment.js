@@ -4,6 +4,9 @@ var activeAssessment = new Assessment;
 //  Open first tab by default
 window.onload = document.getElementById("tabInfo").click();
 
+//  Opening PDF modal, update the data in the modal
+window.onfocus = document.getElementById("modalExport").addEventListener("focusin", updatePDFPreview);
+
 //  Assessment Tab 1 field listeners
 document.getElementById("fldTherapist").addEventListener("focusout",assessmentTherapist);
 document.getElementById("fldClientRef").addEventListener("focusout",assessmentClientRef);
@@ -63,10 +66,13 @@ document.getElementById("notePPA").addEventListener("focusout",assessmentNote);
 //  Assessment Tab 3 field listeners
 document.getElementById("tabScore").addEventListener("click", scoreAssessment);
 document.getElementById("noteOverall").addEventListener("focusout",assessmentNote);
-document.getElementById("buttonConfirmReset").addEventListener("click", resetAssessment);
-document.getElementById("btnExport").addEventListener("click", exportAssessment);
-document.getElementById("btnSave").addEventListener("click", saveAssessment);
- 
+
+//  Assessment button listeners
+document.getElementById("btnConfirmReset").addEventListener("click", resetAssessment);
+document.getElementById("btnCSVExport").addEventListener("click", exportCSVAssessment);
+document.getElementById("btnPDFExport").addEventListener("click", exportPDFAssessment);
+document.getElementById("btnConfirmSave").addEventListener("click", saveAssessment);
+
 function defaultTab() {
     $("#tabs").tabs({
         active: 0,
@@ -88,13 +94,11 @@ function assessmentClientRef() {
 };
 
 function assessmentDate() { 
-    activeAssessment.date = document.getElementById("fldAssessDate").value;
+    activeAssessment.date = Date(document.getElementById("fldAssessDate").value);
 };
 
 function assessmentType() { 
     activeAssessment.type = document.getElementById("fldAssessType").value;
-    console.log("this.type = " + activeAssessment.type);
-    console.log("field = " + document.getElementById("fldAssessType").value);
 };
 
 function assessmentState() { 
@@ -112,7 +116,7 @@ function assessmentAge() {
 function assessmentFemaleChg() { 
     document.getElementById("chkFemale").checked = true;
     activeAssessment.clientGender = "Female";
-    document.getElementById("chkMale").checked = false;    
+    document.getElementById("chkMale").checked = false;  
 };
 
 function assessmentMaleChg() { 
@@ -176,9 +180,7 @@ function assessmentNote() {
     activeAssessment.comments[8] = document.getElementById("noteFunctional").value;
     activeAssessment.comments[9] = document.getElementById("notePPA").value;
     activeAssessment.comments[10] = document.getElementById("noteOverall").value;
-    
 };
-
 
 function scoreAssessment() { 
 
@@ -193,25 +195,174 @@ function scoreAssessment() {
 
     //  Display scores on screen
     document.getElementById("scoreTotalNA").value = activeAssessment.scoreTotalNA;
-    document.getElementById("scoreTotalUncalc").value = activeAssessment.scoreTotalUncalcd;
-    document.getElementById("scoreTotalAdjust").value = activeAssessment.scoreTotalAdjd;
-    document.getElementById("scoreTotalClient").value = activeAssessment.scoreTotalClient;
-    document.getElementById("scoreRSRAFVP").value = activeAssessment.scoreRSRAFVP;
-    document.getElementById("scoreImpairment").value = activeAssessment.scoreImpairment;
+    document.getElementById("scoreTotalUncalc").value = activeAssessment.scoreTotalUncalcd + "pts";
+    document.getElementById("scoreTotalAdjust").value = activeAssessment.scoreTotalAdjd + "pts";
+    document.getElementById("scoreTotalClient").value = activeAssessment.scoreTotalClient + "pts";
+    document.getElementById("scoreRSRAFVP").value = activeAssessment.scoreRSRAFVP + "%";
+    document.getElementById("scoreImpairment").value = activeAssessment.scoreImpairment + "%";
     document.getElementById("scoreGCode").value = activeAssessment.scoreMedicare;
+
+    //  Update session storage for all values
+    setSessionStorage();
+
 };
 
+function setSessionStorage() {
+
+    sessionStorage.setItem("sessionTherapist",activeAssessment.therapist);
+    sessionStorage.setItem("sessionClientRef",activeAssessment.clientRef);
+    sessionStorage.setItem("sessionAssessDate",activeAssessment.date);
+    sessionStorage.setItem("sessionType",activeAssessment.type);
+    sessionStorage.setItem("sessionState",activeAssessment.state);
+    sessionStorage.setItem("sessionCountry",activeAssessment.country);
+    sessionStorage.setItem("sessionAge",activeAssessment.clientAge);
+    sessionStorage.setItem("sessionGender",activeAssessment.clientGender);
+    sessionStorage.setItem("sessionDiagnosis",activeAssessment.clientDiagnosis);
+
+    length = activeAssessment.headings.length;
+    for (var i=1; i< length; i++) {
+        sessionStorage.setItem("sessionH"+i,activeAssessment.headings[i]);
+    }
+
+    length = activeAssessment.questions.length;
+    for (var i=1; i< length; i++) {
+        sessionStorage.setItem("sessionQ"+i,activeAssessment.questions[i]);
+    }
+
+    length = activeAssessment.answers.length;
+    for (var i=1; i< length; i++) {
+        sessionStorage.setItem("sessionA"+i,activeAssessment.answers[i]);
+    }
+
+    length = activeAssessment.comments.length;
+    for (var i=1; i< length; i++) {
+        sessionStorage.setItem("sessionC"+i,activeAssessment.comments[i]);
+    }
+
+    sessionStorage.setItem("scoreTotalNA",activeAssessment.scoreTotalNA);
+    sessionStorage.setItem("scoreTotalUncalcd",activeAssessment.scoreTotalUncalcd);
+    sessionStorage.setItem("scoreTotalAdjd",activeAssessment.scoreTotalAdjd);
+    sessionStorage.setItem("scoreTotalClient",activeAssessment.scoreTotalClient);
+    sessionStorage.setItem("scoreRSRAFVP",activeAssessment.scoreRSRAFVP);
+    sessionStorage.setItem("scoreImpairment",activeAssessment.scoreImpairment);
+    sessionStorage.setItem("scoreMedicare",activeAssessment.scoreMedicare);
+
+    console.log("setting the session storage");
+    console.log(sessionStorage);
+}
+
 function resetAssessment() { 
+    
     activeAssessment = new Assessment;
+    sessionStorage.clear();
     location.reload();
     return false;
 };
 
-function saveAssessment() { 
-    console.log("clicked save")
+function updatePDFPreview() { 
+
+    var datetime = new Date(sessionStorage.getItem("sessionAssessDate"));
+    var datetimeString = datetime.getMonth() + "/" + datetime.getDate() + "/" + datetime.getFullYear();
+    var location = sessionStorage.getItem("sessionState") + " / " + sessionStorage.getItem("sessionCountry");
+    var ageNGender = sessionStorage.getItem("sessionAge") + " / " + sessionStorage.getItem("sessionGender");
+    
+    document.getElementById("lblTherapist").innerHTML = sessionStorage.getItem("sessionTherapist");
+    document.getElementById("lblClientRef").innerHTML = sessionStorage.getItem("sessionClientRef");
+    document.getElementById("lblDate").innerHTML = datetimeString;
+    document.getElementById("lblType").innerHTML = sessionStorage.getItem("sessionType");
+    document.getElementById("lblLocation").innerHTML = location;
+    document.getElementById("lblAgeNGender").innerHTML = ageNGender;
+    document.getElementById("lblDiagnosis").innerHTML = sessionStorage.getItem("sessionDiagnosis");
+
+    length = activeAssessment.headings.length;
+    for (var i=1; i< length; i++) {
+        if (i < (length-1)) {
+            document.getElementById("lblHeading"+i).innerHTML = "Section: " + sessionStorage.getItem("sessionH"+i);
+        }
+        else {
+            document.getElementById("lblHeading"+i).innerHTML = sessionStorage.getItem("sessionH"+i);
+        }
+    }
+
+    length = activeAssessment.questions.length;
+    for (var i=1; i< length; i++) {
+        document.getElementById("lblQuestion"+i).innerHTML = sessionStorage.getItem("sessionQ"+i);
+    }
+
+    length = activeAssessment.answers.length;
+    for (var i=1; i< length; i++) {
+        document.getElementById("lblAnswer"+i).innerHTML = sessionStorage.getItem("sessionA"+i);
+    }
+
+    length = activeAssessment.comments.length;
+    for (var i=1; i< length; i++) {
+        if (i < (length-1)) {
+            document.getElementById("lblComment"+i).innerHTML = "Section comments: " + sessionStorage.getItem("sessionC"+i);
+        }
+        else {
+            document.getElementById("lblComment"+i).innerHTML = "Overall comments: " + sessionStorage.getItem("sessionC"+i);
+        }
+    }
+
+    document.getElementById("lblTNA").innerHTML = sessionStorage.getItem("scoreTotalNA");
+    document.getElementById("lblTUNC").innerHTML = sessionStorage.getItem("scoreTotalUncalcd");
+    document.getElementById("lblTADJ").innerHTML = sessionStorage.getItem("scoreTotalAdjd");
+    document.getElementById("lblTCLI").innerHTML = sessionStorage.getItem("scoreTotalClient");
+    document.getElementById("lblSR").innerHTML = sessionStorage.getItem("scoreRSRAFVP");
+    document.getElementById("lblSI").innerHTML = sessionStorage.getItem("scoreImpairment");
+    document.getElementById("lblSM").innerHTML = sessionStorage.getItem("scoreMedicare");
+
 };
 
-function exportAssessment() { 
-    activeAssessment.exportFile();
-    // activeAssessment.exportConsole();
+function exportCSVAssessment() { 
+       
+    var filename = createFilename() + ".csv";
+
+    var csvObj = activeAssessment.createCSVExport();
+    var exportFile = new File([csvObj], filename, {type: "text/plain;charset=utf-8"});
+    saveAs(exportFile);
+
+};
+
+function exportPDFAssessment() { 
+
+    var filename = createFilename() + ".pdf";
+
+    printJS({
+        documentTitle: filename,
+        printable: 'formExport', type: 'html',
+        documentTitle: filename
+    });
+};
+
+function saveAssessment() { 
+    
+    var filename = createFilename() + ".json";
+    var jsonObj = JSON.stringify(activeAssessment.createJSONExport());
+    var exportFile = new File([jsonObj], filename, {type: "text/plain;charset=utf-8"});
+    saveAs(exportFile);
+};
+
+function createFilename() {
+    
+    //  Use Assessment date, therapist, client ref and assessment type for filename
+
+    var datename = new Date(sessionStorage.getItem("sessionAssessDate"));
+    var datenameString = datename.getFullYear() +"." + datename.getMonth() + "." + datename.getDate();
+
+    var therapist = activeAssessment.therapist;
+    var client = activeAssessment.clientRef;
+    var type = activeAssessment.type;
+
+    if ( therapist == "") {
+        therapist = "therapist";
+    }
+    if (client == "") {
+        client = "clientReference";
+    }
+
+    var filename = (datenameString + "_" + therapist + "_" + client + "_" + type);
+    
+    return filename;
+    
 };
