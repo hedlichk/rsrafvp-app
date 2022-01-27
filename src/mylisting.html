@@ -1,31 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="myassessments" lang="en" screenname="myassessments">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>rsrafvp</title>
+    <title>R-SRAFVP</title>
     <meta name="theme-color" content="#264391">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/rsrafvp-icon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/rsrafvp-icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/rsrafvp-icon-512.png">
+    <meta name="description" content="Revised Self Reporting Assessment of Functional Visual Performance">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="assets/img/RSRAFVPLogos/rsrafvp_logo_152.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/RSRAFVPLogos/rsrafvp_logo_192.png">
+    <link rel="icon" type="image/png" sizes="511x511" href="assets/img/RSRAFVPLogos/rsrafvp_logo_512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/print.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="text-center" style="color: #ffffff;background: #264391;">
-    <h1 class="text-center" style="padding: 24px 0px 0px 0px;font-weight: bold;">My Assessments</h1>
+    <div class="container" style="min-width: 360px;max-width: 768px;">
+        <nav class="navbar navbar-light" style="max-width: 768px;margin-bottom: 2%;border-bottom-style: solid;border-bottom-color: #cccccc;">
+            <div class="container-fluid"><a class="navbar-brand" id="fldWhoAmI" href="#" style="font-weight: bold;color: #cccccc;font-size: 16px;">Username</a>
+                <div class="btn-group" role="group"><a class="btn btn-primary" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" id="btnActiveAssess" href="myassessment.html" style="background: #cccccc;margin-right: 4px;margin-left: 4px;" title="Active Assessment"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text" style="color: var(--bs-body-color);">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                            <line x1="9" y1="9" x2="10" y2="9"></line>
+                            <line x1="9" y1="13" x2="15" y2="13"></line>
+                            <line x1="9" y1="17" x2="15" y2="17"></line>
+                        </svg></a><a class="btn disabled" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" id="btnMyAssessments" href="mylisting.html" style="background: #cccccc;margin-left: 4px;margin-right: 4px;" title="My Assessments"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-folders" style="color: var(--bs-body-color);">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"></path>
+                            <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
+                        </svg></a></div><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: center;border-top-left-radius: 4px;border-style: solid;border-color: #cccccc;background: #cccccc;font-size: 18px;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon text-center" title="Menu"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav">
+                        <li class="nav-item" id="linkLogin"><a class="nav-link" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;" href="login.html">Login / Logout</a></li>
+                        <li class="nav-item" id="linkContact"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="contact.html">Contact</a></li>
+                        <li class="nav-item" id="linkHelp"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="help.html">Help</a></li>
+                        <li class="nav-item" id="linkAbout"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h3 style="padding-top: 16px;text-align: center;">My Saved Assessments</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td style="min-height: 10%;max-height: 10%;"><label class="form-label float-start" style="color: var(--bs-body-bg);">Assessment</label>
+                            <div class="btn-group float-end" role="group" style="min-height: 32px;"><button class="btn btn-primary" id="btnReview" type="button" style="background: url(&quot;assets/img/icons/iconFile.png&quot;) center / contain no-repeat, #cccccc;border-top-left-radius: 4px;border-style: solid;border-color: #cccccc;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;margin-right: 4px;margin-left: 4px;"></button><button class="btn btn-primary" id="btnPrint" type="button" style="background: url(&quot;assets/img/icons/iconPrinter.png&quot;) center / contain no-repeat, #cccccc;border-top-left-radius: 4px;border-style: solid;border-color: #cccccc;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;margin-right: 4px;margin-left: 4px;"></button><button class="btn btn-primary" id="btnDelete" type="button" style="background: url(&quot;assets/img/icons/iconTrashcan.png&quot;) center / contain no-repeat, #cccccc;margin-right: 4px;margin-left: 4px;border-top-left-radius: 4px;border-top-right-radius: 4px;border-bottom-right-radius: 4px;border-bottom-left-radius: 4px;"></button></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label class="form-label float-start" style="color: var(--bs-body-bg);">Assessment</label></td>
+                    </tr>
+                    <tr>
+                        <td><label class="form-label float-start" style="color: var(--bs-body-bg);">Assessment</label></td>
+                    </tr>
+                    <tr>
+                        <td><label class="form-label float-start" style="color: var(--bs-body-bg);">Assessment</label></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><button class="btn btn-primary" id="btnGetAssessments" type="button">Get Assessments</button>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/print.min.js"></script>
-    <script src="assets/js/require.js"></script>
+    <script src="assets/js/firebase-app-compat.js"></script>
+    <script src="assets/js/firebase-analytics-compat.js"></script>
+    <script src="assets/js/firebase-auth-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
+    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/whoami.js"></script>
+    <script src="assets/js/firebase-firestore-compat.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="assets/js/mylisting.js"></script>
 </body>
 
 </html>

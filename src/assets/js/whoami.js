@@ -1,3 +1,7 @@
 window.onload = function whoAmI() {
-    document.getElementById("fldWhoAmI").innerHTML = "Anonymous User";
+    if (localStorage.userName == null || localStorage.userName == "") {
+        localStorage.userName = "Guest";
+    }
+    document.getElementById("fldWhoAmI").innerHTML = localStorage.userName;
 };
+

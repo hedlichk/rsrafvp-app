@@ -1,61 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="activeassessment" lang="en" screenname="activeassessment">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>rsrafvp</title>
+    <title>R-SRAFVP</title>
     <meta name="theme-color" content="#264391">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/rsrafvp-icon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/rsrafvp-icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/rsrafvp-icon-512.png">
+    <meta name="description" content="Revised Self Reporting Assessment of Functional Visual Performance">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="assets/img/RSRAFVPLogos/rsrafvp_logo_152.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/RSRAFVPLogos/rsrafvp_logo_192.png">
+    <link rel="icon" type="image/png" sizes="511x511" href="assets/img/RSRAFVPLogos/rsrafvp_logo_512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/print.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body style="color: #ffffff;background: #264395;margin-bottom: 24px;">
     <div class="container" id="containerTest" style="min-width: 360px;max-width: 768px;">
-        <nav class="navbar navbar-light" style="border-bottom-style: solid;border-bottom-color: #cccccc;">
-            <div class="container-fluid"><a class="navbar-brand" id="fldWhoAmI" href="#" style="font-weight: bold;color: #cccccc;">Username</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: right;border-style: solid;border-color: #cccccc;border-top-left-radius: 4px;background: #cccccc;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div style="min-width: 100%;"></div>
+        <nav class="navbar navbar-light" style="max-width: 768px;margin-bottom: 2%;border-bottom-style: solid;border-bottom-color: #cccccc;">
+            <div class="container-fluid"><a class="navbar-brand" id="fldWhoAmI" href="#" style="font-weight: bold;color: #cccccc;font-size: 16px;">Username</a>
+                <div class="btn-group" role="group"><a class="btn btn-primary" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" id="btnActiveAssess" href="myassessment.html" style="background: #cccccc;margin-right: 4px;margin-left: 4px;" title="Active Assessment"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-text" style="color: var(--bs-body-color);">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M14 3v4a1 1 0 0 0 1 1h4"></path>
+                            <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path>
+                            <line x1="9" y1="9" x2="10" y2="9"></line>
+                            <line x1="9" y1="13" x2="15" y2="13"></line>
+                            <line x1="9" y1="17" x2="15" y2="17"></line>
+                        </svg></a><a class="btn disabled" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="right" id="btnMyAssessments" href="mylisting.html" style="background: #cccccc;margin-left: 4px;margin-right: 4px;" title="My Assessments"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-folders" style="color: var(--bs-body-color);">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 4h3l2 2h5a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"></path>
+                            <path d="M17 17v2a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2h2"></path>
+                        </svg></a></div><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1" style="text-align: center;border-top-left-radius: 4px;border-style: solid;border-color: #cccccc;background: #cccccc;font-size: 18px;"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon text-center" title="Menu"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="main.html" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="helpassessment.html" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;">Assessment Help</a></li>
+                        <li class="nav-item" id="linkLogin"><a class="nav-link" style="font-weight: bold;color: #ffffff;text-decoration: underline;text-align: right;" href="login.html">Login / Logout</a></li>
+                        <li class="nav-item" id="linkContact"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="contact.html">Contact</a></li>
+                        <li class="nav-item" id="linkHelp"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="help.html">Help</a></li>
+                        <li class="nav-item" id="linkAbout"><a class="nav-link" style="color: #ffffff;font-weight: bold;text-decoration: underline;text-align: right;" href="about.html">About</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div>
             <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabInfo" href="#tab-1" style="font-size: 12px;">Info</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link active link-light" role="tab" data-bs-toggle="tab" id="tabInfo" href="#tab-1" style="font-size: 12px;">Info</a></li>
                 <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabQuestions" href="#tab-2" style="font-size: 12px;">Questions</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link active link-light" role="tab" data-bs-toggle="tab" id="tabScore" href="#tab-3" style="font-size: 12px;">Scores</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabAnswerScale" href="#tab-4" style="font-size: 12px;">Answering Scale</a></li>
-                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabMedicareScale" href="#tab-5" style="font-size: 12px;">Medicare G-Code</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabScore" href="#tab-3" style="font-size: 12px;">Scores</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabAnswerScale" href="#tab-4" style="font-size: 12px;">Scale</a></li>
+                <li class="nav-item" role="presentation" style="font-weight: bold;"><a class="nav-link link-light" role="tab" data-bs-toggle="tab" id="tabMedicareScale" href="#tab-5" style="font-size: 12px;">G-Code</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane" role="tabpanel" id="tab-1">
-                    <p style="margin-top: 16px;">Fill in the following information.</p><label class="form-label d-block" style="text-align: left;font-size: 14px;margin-top: 3px;">Therapist</label><input class="d-block" type="text" id="fldTherapist" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;font-size: 14px;min-width: 100%;margin-top: 3px;" placeholder="{enter therapist's name here}" name="fldTherapist" maxlength="96" autofocus="" required="" minlength="3"><label class="form-label d-block" style="text-align: left;margin-top: 12px;font-size: 14px;">Client Reference</label><input class="d-block" type="text" id="fldClientRef" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;margin-top: 3px;font-size: 14px;min-width: 100%;" placeholder="{MRN, name, any client reference info}" name="fldClientRef" maxlength="96" required="" minlength="3"><label class="form-label d-inline-block" style="text-align: left;font-size: 14px;min-width: 49%;margin-top: 12px;">Assessment Date</label><input class="d-inline-block float-end" id="fldAssessDate" type="date" required="" value="now()" step="1" style="min-width: 50%;margin-top: 12px;font-size: 14px;" name="fldAssessDate"><label class="form-label d-inline-block" style="margin-top: 3px;font-size: 14px;min-width: 49%;">Assessment type</label><select class="d-inline-block float-end" id="fldAssessType" style="margin-top: 3px;font-size: 14px;min-width: 50%;" name="fldAssessType" value="Initial" required="">
-                        <optgroup label="">
-                            <option value="Initial" selected="">Initial</option>
-                            <option value="Progress">Progress</option>
-                            <option value="Discharge">Discharge</option>
-                        </optgroup>
-                    </select>
-                    <div class="row">
-                        <div class="col"><label class="form-label d-inline-block" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Assessment Location</label><input type="text" id="fldState" style="font-size: 14px;min-width: 25%;max-width: 25%;" name="fldCountry" placeholder="{state/prov}" required="" maxlength="20"><input type="text" id="fldCountry" style="font-size: 14px;min-width: 25%;max-width: 25%;" placeholder="{cntry}" name="fldCountry" maxlength="20" required=""></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><label class="form-label" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Client Age</label><input type="number" id="fldAge" min="0" max="120" step="1" placeholder="{enter age number}" style="min-width: 50%;margin-top: 3px;font-size: 14px;" name="fldAge" required=""></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><label class="form-label" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Client Gender</label><label class="form-label" style="font-size: 14px;min-width: 25%;max-width: 25%;margin-top: 6px;">Female<input type="checkbox" id="chkFemale" style="font-size: 14px;margin-left: 5px;" name="fldFemale"></label><label class="form-label" style="font-size: 14px;min-width: 25%;max-width: 25%;">Male<input type="checkbox" id="chkMale" style="font-size: 14px;margin-left: 5px;margin-top: 6px;" name="fldMale"></label></div>
-                    </div><label class="form-label d-block" style="text-align: left;min-width: 35%;font-size: 14px;">Client Eye Diagnosis</label><input class="d-block" type="text" id="fldDiagnosis" placeholder="{enter any eye diagnosis'}" style="min-width: 100%;" name="fldDiagnosis">
+                <div class="tab-pane active" role="tabpanel" id="tab-1">
+                    <p style="margin-top: 16px;">Fill in the following information.</p><label class="form-label d-block" style="text-align: left;font-size: 14px;margin-top: 3px;">Therapist</label><input class="d-block" type="text" id="fldTherapist" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;font-size: 14px;min-width: 100%;margin-top: 3px;" name="fldTherapist" maxlength="96" required="" minlength="3" placeholder="{enter therapist's name here}"><label class="form-label d-block" style="text-align: left;margin-top: 12px;font-size: 14px;">Client Reference</label><input class="d-block" type="text" id="fldClientRef" title="enter therapist name" style="text-shadow: 0px 0px;text-align: left;margin-top: 3px;font-size: 14px;min-width: 100%;" placeholder="{MRN, name, any client reference info}" name="fldClientRef" maxlength="96" required="" minlength="3">
+                    <div><label class="form-label" style="text-align: left;font-size: 14px;margin-top: 12px;">Assessment Date</label><input class="float-end" id="fldAssessDate" type="datetime-local" required="" step="1" style="min-width: 50%;margin-top: 12px;font-size: 14px;max-width: 50%;" name="fldAssessDate" value="&quot;01/01/2022 12:00 AM&quot;"></div>
+                    <div><label class="form-label" style="margin-top: 3px;font-size: 14px;">Assessment type</label><select class="float-end" id="fldAssessType" style="margin-top: 3px;font-size: 14px;min-width: 50%;max-width: 50%;" name="fldAssessType" value="Initial" required="">
+                            <optgroup label="">
+                                <option value="Initial" selected="">Initial</option>
+                                <option value="Progress">Progress</option>
+                                <option value="Discharge">Discharge</option>
+                            </optgroup>
+                        </select></div>
+                    <div><label class="form-label d-inline-block" style="text-align: left;margin-top: 3px;font-size: 14px;">Assessment Location</label><input class="float-end" type="text" id="fldState" style="font-size: 14px;min-width: 25%;max-width: 25%;" name="fldCountry" placeholder="{state/prov}" required="" maxlength="20"><input class="float-end" type="text" id="fldCountry" style="font-size: 14px;min-width: 25%;max-width: 25%;" placeholder="{cntry}" name="fldCountry" maxlength="20" required=""></div>
+                    <div><label class="form-label" style="text-align: left;margin-top: 3px;font-size: 14px;">Client Age</label><input class="float-end" type="number" id="fldAge" min="0" max="120" step="1" placeholder="{enter age number}" style="min-width: 50%;margin-top: 3px;font-size: 14px;max-width: 50%;" name="fldAge" required=""></div>
+                    <div><label class="form-label" style="text-align: left;margin-top: 3px;font-size: 14px;min-width: 50%;">Client Gender</label><label class="form-label" style="font-size: 14px;min-width: 25%;max-width: 25%;margin-top: 6px;">Female<input type="checkbox" id="chkFemale" style="font-size: 14px;margin-left: 5px;" name="fldFemale"></label><label class="form-label" style="font-size: 14px;min-width: 25%;max-width: 25%;">Male<input type="checkbox" id="chkMale" style="font-size: 14px;margin-left: 5px;margin-top: 6px;" name="fldMale"></label></div><label class="form-label d-block" style="text-align: left;font-size: 14px;">Client Eye Diagnosis</label><input class="d-block" type="text" id="fldDiagnosis" placeholder="{enter any eye diagnosis'}" style="min-width: 100%;font-size: 14px;" name="fldDiagnosis">
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-2">
                     <p style="margin-top: 16px;">Answer all of the questions.&nbsp; The comments sections are for therapists for any additional information.</p>
@@ -130,7 +142,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="notePersonal" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="notePersonal"></textarea>
+                        </select></p><textarea class="d-block" id="notePersonal" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="notePersonal"></textarea>
                     <h4 style="margin-top: 2%;padding: 3px 0px;text-align: left;">Meal/Laundry Preparation</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: left;">Meal preparation - chop, slice, cut, peel foods<select class="d-inline float-end" id="A8" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: center;" name="A08">
                             <optgroup label="Answer">
@@ -191,7 +203,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="noteMealPrep" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="noteMealPrep"></textarea>
+                        </select></p><textarea class="d-block" id="noteMealPrep" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteMealPrep"></textarea>
                     <h4 style="margin-top: 2%;padding: 3px 0px;text-align: left;">Financial Management</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: left;">Manage records<select class="d-inline float-end" id="A14" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: center;" name="A14">
                             <optgroup label="Answer">
@@ -243,7 +255,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="notePhone" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="notePhone"></textarea>
+                        </select></p><textarea class="d-block" id="notePhone" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="notePhone"></textarea>
                     <h4 style="margin-top: 2%;padding: 3px 0px;text-align: left;">Reading</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: left;">TV guide on TV<select class="d-inline float-end" id="A19" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: center;" name="A19">
                             <optgroup label="Answer">
@@ -284,7 +296,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="noteReading" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="noteReading"></textarea>
+                        </select></p><textarea class="d-block" id="noteReading" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteReading"></textarea>
                     <h4 style="margin-top: 2%;padding: 3px 0px;text-align: left;">Writing</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: left;">Legible personal list/short note<select class="d-inline float-end" id="A23" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: center;" name="A23">
                             <optgroup label="Answer">
@@ -315,7 +327,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="noteWriting" style="max-width: 100%;min-width: 100%;margin-bottom: 3px;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="noteWriting"></textarea>
+                        </select></p><textarea class="d-block" id="noteWriting" style="max-width: 100%;min-width: 100%;margin-bottom: 3px;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteWriting"></textarea>
                     <h4 style="margin-top: 2%;margin-bottom: 3px;padding: 3px 0px;text-align: left;">Functional Mobility</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: left;">Ascend/descend stairs<select class="d-inline float-end" id="A26" style="min-width: 20%;margin-bottom: 3px;font-size: 14px;padding: 3px 0px;text-align: center;" name="A26">
                             <optgroup label="Answer">
@@ -356,7 +368,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                             </optgroup>
-                        </select></p><textarea class="d-block" id="noteFunctional" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;" placeholder="{comments, leave blank if none}" name="noteFunctional"></textarea>
+                        </select></p><textarea class="d-block" id="noteFunctional" style="max-width: 100%;min-width: 100%;padding: 3px 0px;text-align: left;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteFunctional"></textarea>
                     <h4 style="margin-top: 2%;padding: 3px 0px;text-align: left;">Personal Preference Activities</h4>
                     <p class="d-inline float-start mb-0" style="color: #ffffff;min-width: 100%;margin-bottom: 3px;padding: 3px 0px;text-align: left;font-size: 14px;">Shaving<select class="d-inline float-end" id="A30" style="min-width: 20%;margin-bottom: 3px;padding: 3px 0px;text-align: center;" name="A30">
                             <optgroup label="Answer">
@@ -399,360 +411,13 @@
                             </optgroup>
                         </select></p><textarea class="d-block" id="notePPA" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="notePPA"></textarea>
                 </div>
-                <div class="tab-pane active" role="tabpanel" id="tab-3">
-                    <p style="margin-top: 16px;">Shown here is the score for this assessment based on the answers from the previous tab.</p><label class="form-label d-block" style="font-size: 14px;">Total NA&nbsp;questions<input class="float-end" type="text" id="scoreTotalNA" readonly="" style="background: #cccccc;font-weight: bold;max-width: 30%;text-align: center;" name="scoreTotalNA"></label><label class="form-label d-block" style="font-size: 14px;">Total uncalc'd points<input class="float-end" type="text" id="scoreTotalUncalc" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalUncalc"></label><label class="form-label d-block" style="font-size: 14px;">Total adjusted points<input class="float-end" type="text" id="scoreTotalAdjust" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalAdjust"></label><label class="form-label d-block" style="font-size: 14px;">Clients total points<input class="float-end" type="text" id="scoreTotalClient" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalClient"></label><label class="form-label d-block" style="font-size: 14px;">R-SRAFVP scor<input class="float-end" type="text" id="scoreRSRAFVP" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreRSRAFVP">e</label><label class="form-label d-block" style="font-size: 14px;">Impairment %<input class="float-end" type="text" id="scoreImpairment" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreImpairment"></label><label class="form-label d-block" style="font-size: 14px;">Medicare G-code Modifier<input class="float-end" type="text" id="scoreGCode" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreGCode"></label><textarea class="d-block" id="noteOverall" style="max-width: 100%;min-width: 100%;" placeholder="{comments, leave blank if none}" name="noteOverall"></textarea>
-                    <div class="btn-group btn-group-sm" role="group" style="min-width: 100%;margin-top: 24px;"><button class="btn btn-primary" id="btnReset" type="button" style="color: #000000;margin-right: 2%;margin-left: 2%;background: #cccccc;border-radius: 4px;padding: 8px;" data-bs-target="#modalReset" data-bs-toggle="modal">Reset</button><button class="btn btn-primary" id="btnExport" type="button" style="color: #000000;margin-right: 2%;margin-left: 2%;background: #cccccc;border-radius: 4px;padding: 8px;" data-bs-target="#modalExport" data-bs-toggle="modal">Print/Export</button><button class="btn btn-primary disabled" id="btnSave" type="button" style="color: #000000;margin-left: 2%;margin-right: 2%;background: #cccccc;border-radius: 4px;padding: 8px;" data-bs-target="#modalSave" data-bs-toggle="modal" disabled="">Save</button></div>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="modalReset">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" style="color: #000000;">Reset Active Assessment?</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p style="color: #000000;">Are you sure you want to reset the active assessment?&nbsp; Press the CONFIRM button to confirm.</p>
-                                </div>
-                                <div class="modal-footer"><button class="btn btn-primary" id="btnCancelReset" type="button" data-bs-dismiss="modal" style="background: #cccccc;color: #000000;border-radius: 4px;">Cancel</button><button class="btn btn-primary" id="btnConfirmReset" type="button" data-bs-dismiss="modal" style="border-radius: 4px;">Confirm</button></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="modalSave">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" style="color: #000000;">Active Assessment Save</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p style="color: #000000;">Are you sure you want to reset the active assessment?&nbsp;&nbsp;Press the save button to confirm.</p>
-                                </div>
-                                <div class="modal-footer"><button class="btn btn-primary" id="btnCancelSave" type="button" data-bs-dismiss="modal" style="background: #cccccc;color: #000000;border-radius: 4px;">Cancel</button><button class="btn btn-primary active" id="btnConfirmSave" type="button" data-bs-dismiss="modal">Save</button></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" role="dialog" tabindex="-1" id="modalExport">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" style="color: #000000;">Print Preview</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" id="formExport">
-                                    <h1 style="color: #000000;">R-SRAFVP Assessment</h1>
-                                    <h2 style="border-style: solid;border-top-style: none;border-right-style: none;border-left-style: none;color: #000000;">General Information:</h2>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="border-style: none;">Therapist</td>
-                                                    <td class="text-end" id="lblTherapist" style="font-weight: bold;border-style: none;" value="activeAssessment.therapist">therapist</td>
-                                                </tr>
-                                                <tr style="text-align: right;">
-                                                    <td style="border-style: none;text-align: left;">Client Reference<br></td>
-                                                    <td class="text-end" id="lblClientRef" style="font-weight: bold;border-style: none;">client</td>
-                                                </tr>
-                                                <tr style="text-align: left;">
-                                                    <td style="border-style: none;text-align: left;">Assessment Date</td>
-                                                    <td class="text-end" id="lblDate" style="font-weight: bold;border-style: none;">date</td>
-                                                </tr>
-                                                <tr style="text-align: left;">
-                                                    <td style="border-style: none;text-align: left;">Assessment Type</td>
-                                                    <td class="text-end" id="lblType" style="font-weight: bold;border-style: none;">type</td>
-                                                </tr>
-                                                <tr style="text-align: left;">
-                                                    <td style="border-style: none;text-align: left;">Assessment Location</td>
-                                                    <td class="text-end" id="lblLocation" style="font-weight: bold;border-style: none;">location</td>
-                                                </tr>
-                                                <tr style="text-align: left;">
-                                                    <td style="border-style: none;text-align: left;">Client Age &amp; Gender<br></td>
-                                                    <td class="text-end" id="lblAgeNGender" style="font-weight: bold;border-style: none;">age n gender</td>
-                                                </tr>
-                                                <tr style="text-align: left;">
-                                                    <td style="border-style: none;text-align: left;">Client Diagnosis</td>
-                                                    <td class="text-end" id="lblDiagnosis" style="font-weight: bold;border-style: none;">diagnosis</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <h2 style="border-style: solid;border-top-style: none;border-right-style: none;border-bottom-style: solid;border-left-style: none;color: #000000;">Questions &amp; Answers:</h2>
-                                    <h4 id="lblHeading1" style="color: #000000;border-style: none;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 1</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion1" style="font-size: 14px;">question 1</td>
-                                                    <td class="text-start" style="font-size: 14px;">Identifies&nbsp;medications, expiration dates and measures accurate dosage (liquid, pills,&nbsp;drops, drawing from a syringe, etc.)<br></td>
-                                                    <td class="text-end" id="lblAnswer1" style="font-weight: bold;font-size: 14px;">answer 1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion2" style="font-size: 14px;">question 2</td>
-                                                    <td class="text-start" style="font-size: 14px;">Opens&nbsp;bottles/packages; administers medication properly; recovers dropped medication.</td>
-                                                    <td class="text-end" id="lblAnswer2" style="font-weight: bold;font-size: 14px;">answer 2</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion3" style="font-size: 14px;">question 3</td>
-                                                    <td class="text-start" style="font-size: 14px;">Shopping-locates item&nbsp;and price (visually identifying item or seeking appropriate assistance).<br></td>
-                                                    <td class="text-end" id="lblAnswer3" style="font-weight: bold;font-size: 14px;">answer 3</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment1" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 1</p>
-                                    <h4 id="lblHeading2" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 2</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion4" style="font-size: 14px;">question 4</td>
-                                                    <td class="text-start" style="font-size: 14px;">Locate, select,&nbsp;match clothing by color: match outfits appropriately.<br></td>
-                                                    <td class="text-end" id="lblAnswer4" style="font-weight: bold;font-size: 14px;">answer 4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion5" style="font-size: 14px;">question 5</td>
-                                                    <td class="text-start" style="font-size: 14px;">Combs, brushes,&nbsp;styles and washes hair.<br></td>
-                                                    <td class="text-end" id="lblAnswer5" style="font-weight: bold;font-size: 14px;">answer 5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion6" style="font-size: 14px;">question 6</td>
-                                                    <td class="text-start" style="font-size: 14px;">Trims/files&nbsp;fingernails and toenails.<br></td>
-                                                    <td class="text-end" id="lblAnswer6" style="font-weight: bold;font-size: 14px;">answer 6</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion7" style="font-size: 14px;">question 7</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately applies&nbsp;toothpaste, denture cream, thoroughly cleans.<br></td>
-                                                    <td class="text-end" id="lblAnswer7" style="font-weight: bold;font-size: 14px;">answer 7</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment2" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 2</p>
-                                    <h4 id="lblHeading3" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 3</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion8" style="font-size: 14px;">question 8</td>
-                                                    <td class="text-start" style="font-size: 14px;">Into properly sized pieces; peel completely; use&nbsp;knives/peelers safely.<br></td>
-                                                    <td class="text-end" id="lblAnswer8" style="font-weight: bold;font-size: 14px;">answer 8</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion9" style="font-size: 14px;">question 9</td>
-                                                    <td class="text-start" style="font-size: 14px;">Select correct&nbsp;measuring utensil; fill accurately with minimal spillage.<br></td>
-                                                    <td class="text-end" id="lblAnswer9" style="font-weight: bold;font-size: 14px;">answer 9</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion10" style="font-size: 14px;">question 10</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately locates/selects&nbsp;settings.</td>
-                                                    <td class="text-end" id="lblAnswer10" style="font-weight: bold;font-size: 14px;">answer 10</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion11" style="font-size: 14px;">question 11</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;temperature, identifies when burners are on/off, and monitors food when cooking.<br></td>
-                                                    <td class="text-end" id="lblAnswer11" style="font-weight: bold;font-size: 14px;">answer 11</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion12" style="font-size: 14px;">question 12</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;temperature, identifies when oven is on/off and monitors food when cooking.</td>
-                                                    <td class="text-end" id="lblAnswer12" style="font-weight: bold;font-size: 14px;">answer 12</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion13" style="font-size: 14px;">question 13</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;washing machine/dryer dials; measures dry and liquid soap; identifies and<br>treats stains.<br></td>
-                                                    <td class="text-end" id="lblAnswer13" style="font-weight: bold;font-size: 14px;">answer 13</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment3" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 3</p>
-                                    <h4 id="lblHeading4" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 4</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion14" style="font-size: 14px;">question 14</td>
-                                                    <td class="text-start" style="font-size: 14px;">Makes legible entries&nbsp;into financial records; organized method&nbsp;to retrieve bills statements.<br></td>
-                                                    <td class="text-end" id="lblAnswer14" style="font-weight: bold;font-size: 14px;">answer 14</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion15" style="font-size: 14px;">question 15</td>
-                                                    <td class="text-start" style="font-size: 14px;">Locates and accurately identifies company,<br>amount due, and qualifying statements within time period client considers&nbsp;reasonable.<br></td>
-                                                    <td class="text-end" id="lblAnswer15" style="font-weight: bold;font-size: 14px;">answer 15</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion16" style="font-size: 14px;">question 16</td>
-                                                    <td class="text-start" style="font-size: 14px;">Completes entire form&nbsp;legibly enough for stranger to read; accurate, legible, entry into register; speed<br>sufficient to complete task in community.<br></td>
-                                                    <td class="text-end" id="lblAnswer16" style="font-weight: bold;font-size: 14px;">answer 16</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment4" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 4</p>
-                                    <h4 id="lblHeading5" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 5</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion17" style="font-size: 14px;">question 17</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately inputs numbers- typing in or using<br>speed dial; retrieves messages; locates/opens desired apps; successfully&nbsp;charges device.<br></td>
-                                                    <td class="text-end" id="lblAnswer17" style="font-weight: bold;font-size: 14px;">answer 17</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion18" style="font-size: 14px;">question 18</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately uses personal&nbsp;address book/phone memory function to recall familiar numbers; telephone&nbsp;directory/directory assistance for unfamiliar numbers.<br></td>
-                                                    <td class="text-end" id="lblAnswer18" style="font-weight: bold;font-size: 14px;">answer 18</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment5" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 5</p>
-                                    <h4 id="lblHeading6" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 6</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion19" style="font-size: 14px;">question 19</td>
-                                                    <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information and to select desired choice.<br></td>
-                                                    <td class="text-end" id="lblAnswer19" style="font-weight: bold;font-size: 14px;">answer 19</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion20" style="font-size: 14px;">question 20</td>
-                                                    <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information/enjoyment from activity.<br></td>
-                                                    <td class="text-end" id="lblAnswer20" style="font-weight: bold;font-size: 14px;">answer 20</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion21" style="font-size: 14px;">question 21</td>
-                                                    <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information.<br></td>
-                                                    <td class="text-end" id="lblAnswer21" style="font-weight: bold;font-size: 14px;">answer 21</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion22" style="font-size: 14px;">question 22</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately reports card number, expiration date and&nbsp;security code.<br></td>
-                                                    <td class="text-end" id="lblAnswer22" style="font-weight: bold;font-size: 14px;">answer 22</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment6" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 6</p>
-                                    <h4 id="lblHeading7" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 7</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion23" style="font-size: 14px;">question 23</td>
-                                                    <td class="text-start" style="font-size: 14px;">Client can read back&nbsp;later and/or another person can read.<br></td>
-                                                    <td class="text-end" id="lblAnswer23" style="font-weight: bold;font-size: 14px;">answer 23</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion24" style="font-size: 14px;">question 24</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately position&nbsp;address; stay on line; writing legible to unfamiliar reader.<br></td>
-                                                    <td class="text-end" id="lblAnswer24" style="font-weight: bold;font-size: 14px;">answer 24</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion25" style="font-size: 14px;">question 25</td>
-                                                    <td class="text-start" style="font-size: 14px;">Positions signature&nbsp;accurately; stay on line; signature is legally acceptable; completes task in<br>home/ community.<br></td>
-                                                    <td class="text-end" id="lblAnswer25" style="font-weight: bold;font-size: 14px;">answer 25</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment7" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 7</p>
-                                    <h4 id="lblHeading8" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 8</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion26" style="font-size: 14px;">question 26</td>
-                                                    <td class="text-start" style="font-size: 14px;">Safely navigates using&nbsp;safety features- rails, good lighting-in familiar environments.<br></td>
-                                                    <td class="text-end" id="lblAnswer26" style="font-weight: bold;font-size: 14px;">answer 26</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion27" style="font-size: 14px;">question 27</td>
-                                                    <td class="text-start" style="font-size: 14px;">Negotiates curbs,&nbsp;ramps, transitions between surfaces without stopping, hesitation, probing with<br>cane or asking for assistance.<br></td>
-                                                    <td class="text-end" id="lblAnswer27" style="font-weight: bold;font-size: 14px;">answer 27</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion28" style="font-size: 14px;">question 28</td>
-                                                    <td class="text-start" style="font-size: 14px;">Safely identifies/walks&nbsp;around objects and obstacles in familiar environments.<br></td>
-                                                    <td class="text-end" id="lblAnswer28" style="font-weight: bold;font-size: 14px;">answer 28</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion29" style="font-size: 14px;">question 29</td>
-                                                    <td class="text-start" style="font-size: 14px;">Including&nbsp;street signs, names of stores, signs in store windows, etc.<br></td>
-                                                    <td class="text-end" id="lblAnswer29" style="font-weight: bold;font-size: 14px;">answer 29</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment8" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 8</p>
-                                    <h4 id="lblHeading9" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 9</h4>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion30" style="font-size: 14px;">question 30</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately&nbsp;shaves face, underarms, legs; trims beard/mustache, plucks eyebrows.<br></td>
-                                                    <td class="text-end" id="lblAnswer30" style="font-weight: bold;font-size: 14px;">answer 30</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion31" style="font-size: 14px;">question 31</td>
-                                                    <td class="text-start" style="font-size: 14px;">Completes with&nbsp;sufficient speed, accuracy, effort that the activity is enjoyable.<br></td>
-                                                    <td class="text-end" id="lblAnswer31" style="font-weight: bold;font-size: 14px;">answer 31</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion32" style="font-size: 14px;">question 32</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately&nbsp;locates/selects settings:&nbsp; radio/ipod/phone/TV/remote controls; changes<br>batteries for devices.<br></td>
-                                                    <td class="text-end" id="lblAnswer32" style="font-weight: bold;font-size: 14px;">answer 32</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start" id="lblQuestion33" style="font-size: 14px;">question 33</td>
-                                                    <td class="text-start" style="font-size: 14px;">Accurately reads at&nbsp;least one portable or stationary timepiece in home and community environments.<br></td>
-                                                    <td class="text-end" id="lblAnswer33" style="font-weight: bold;font-size: 14px;">answer 33</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment9" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 9</p>
-                                    <h2 id="lblHeading10" style="border-bottom-style: solid;color: #000000;">Scores:</h2>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-start">Total&nbsp;questions&nbsp;marked&nbsp;NA<br></td>
-                                                    <td class="text-end" id="lblTNA" style="font-weight: bold;">score 1</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Total&nbsp;uncalculated&nbsp;points<br></td>
-                                                    <td class="text-end" id="lblTUNC" style="font-weight: bold;">score 2</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Total&nbsp;adjusted&nbsp;points<br></td>
-                                                    <td class="text-end" id="lblTADJ" style="font-weight: bold;">score 3</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Total&nbsp;client&nbsp;points<br></td>
-                                                    <td class="text-end" id="lblTCLI" style="font-weight: bold;">score 4</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Score R-SRAFVP<br></td>
-                                                    <td class="text-end" id="lblSR" style="font-weight: bold;">score 5</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Score % Impairment<br></td>
-                                                    <td class="text-end" id="lblSI" style="font-weight: bold;">score 6</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-start">Medicare G Code<br></td>
-                                                    <td class="text-end" id="lblSM" style="font-weight: bold;">score 7</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <p id="lblComment10" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 10</p>
-                                </div>
-                                <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal" style="background: #cccccc;">Close</button><button class="btn btn-light" id="btnCSVExport" type="button" style="background: #cccccc;">CSV&nbsp;Export</button><button class="btn btn-primary" id="btnPDFExport" type="button">PDF&nbsp;Print</button></div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="tab-pane" role="tabpanel" id="tab-3">
+                    <p style="margin-top: 16px;">Shown here is the score for this assessment based on the answers from the previous tab.</p><label class="form-label d-block" style="font-size: 14px;">Total NA&nbsp;questions<input class="float-end" type="text" id="scoreTotalNA" readonly="" style="background: #cccccc;font-weight: bold;max-width: 30%;text-align: center;" name="scoreTotalNA"></label><label class="form-label d-block" style="font-size: 14px;">Total uncalc'd points<input class="float-end" type="text" id="scoreTotalUncalc" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalUncalc"></label><label class="form-label d-block" style="font-size: 14px;">Total adjusted points<input class="float-end" type="text" id="scoreTotalAdjust" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalAdjust"></label><label class="form-label d-block" style="font-size: 14px;">Clients total points<input class="float-end" type="text" id="scoreTotalClient" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreTotalClient"></label><label class="form-label d-block" style="font-size: 14px;">R-SRAFVP scor<input class="float-end" type="text" id="scoreRSRAFVP" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreRSRAFVP">e</label><label class="form-label d-block" style="font-size: 14px;">Impairment %<input class="float-end" type="text" id="scoreImpairment" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreImpairment"></label><label class="form-label d-block" style="font-size: 14px;">Medicare G-code Modifier<input class="float-end" type="text" id="scoreGCode" readonly="" style="background: #cccccc;text-align: center;font-weight: bold;max-width: 30%;" name="scoreGCode"></label><textarea class="d-block" id="noteOverall" style="max-width: 100%;min-width: 100%;font-size: 14px;" placeholder="{comments, leave blank if none}" name="noteOverall"></textarea>
+                    <div><button class="btn btn-primary float-start" id="btnReset" type="button" style="color: #000000;background: #cccccc;border-radius: 4px;margin-right: 10%;margin-top: 16px;padding: 5px 12px;padding-top: 8px;padding-bottom: 8px;min-width: 20%;" data-bs-target="#modalReset" data-bs-toggle="modal">Reset</button><button class="btn btn-primary" id="btnExport" type="button" style="color: #000000;background: #cccccc;border-radius: 4px;min-width: 40%;margin-top: 16px;padding-top: 8px;padding-bottom: 8px;" data-bs-target="#modalExport" data-bs-toggle="modal">Print/Export</button><button class="btn btn-primary float-end" id="btnSave" type="button" style="color: #000000;background: #cccccc;border-radius: 4px;min-width: 20%;margin-top: 16px;padding-top: 8px;padding-bottom: 8px;margin-left: 10%;" data-bs-target="#modalSave" data-bs-toggle="modal">Save</button></div>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-4">
-                    <p style="margin-top: 16px;">Help to understand how to answer the questions.</p>
+                    <p style="margin-top: 16px;font-weight: bold;">Scoring scale</p>
+                    <p style="margin-top: 16px;">This is the listing of possible question scores&nbsp; and their meaning.</p>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -791,7 +456,8 @@
                     </div>
                 </div>
                 <div class="tab-pane" role="tabpanel" id="tab-5">
-                    <p style="margin-top: 16px;">Help to understand how to understand the Medicare G Codes.</p>
+                    <p style="margin-top: 16px;font-weight: bold;">Medicare G Codes</p>
+                    <p style="margin-top: 16px;">This is the listing of possible Medicare G-Codes and their meaning.<br></p>
                     <div class="table-responsive">
                         <table class="table">
                             <thead>
@@ -835,16 +501,372 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalReset">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="color: #000000;">Reset Active Assessment?</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color: #000000;">Are you sure you want to reset the active assessment?&nbsp; Press the CONFIRM button to confirm.</p>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-primary" id="btnCancelReset" type="button" data-bs-dismiss="modal" style="background: #cccccc;color: #000000;border-radius: 4px;">Cancel</button><button class="btn btn-primary" id="btnConfirmReset" type="button" data-bs-dismiss="modal" style="border-radius: 4px;">Confirm</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalSave">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="color: #000000;">Active Assessment Save</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color: #000000;">Are you sure you want to reset the active assessment?&nbsp;&nbsp;Press the save button to confirm.</p>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-primary" id="btnCancelSave" type="button" data-bs-dismiss="modal" style="background: #cccccc;color: #000000;border-radius: 4px;">Cancel</button><button class="btn btn-primary active" id="btnConfirmSave" type="button" data-bs-dismiss="modal">Save</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" role="dialog" tabindex="-1" id="modalExport">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style="color: #000000;">CSV Export / Print Preview</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer text-center" style="min-width: 100%;max-width: 100%;"><button class="btn" id="btnCSVExport" type="button" style="background: #cccccc;min-width: 40%;max-width: 40%;margin-right: 8%;">CSV&nbsp;Export</button><button class="btn btn-primary" id="btnPDFExport" type="button" style="min-width: 40%;max-width: 40%;margin-left: 8%;">PDF&nbsp;Print</button></div>
+                    <div class="modal-body" id="formExport">
+                        <h1 style="color: #000000;">R-SRAFVP Assessment</h1>
+                        <h2 style="border-style: solid;border-top-style: none;border-right-style: none;border-left-style: none;color: #000000;">General Information:</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td style="border-style: none;">Therapist</td>
+                                        <td class="text-end" id="lblTherapist" style="font-weight: bold;border-style: none;" value="activeAssessment.therapist">therapist</td>
+                                    </tr>
+                                    <tr style="text-align: right;">
+                                        <td style="border-style: none;text-align: left;">Client Reference<br></td>
+                                        <td class="text-end" id="lblClientRef" style="font-weight: bold;border-style: none;">client</td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td style="border-style: none;text-align: left;">Assessment Date</td>
+                                        <td class="text-end" id="lblDate" style="font-weight: bold;border-style: none;">date</td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td style="border-style: none;text-align: left;">Assessment Type</td>
+                                        <td class="text-end" id="lblType" style="font-weight: bold;border-style: none;">type</td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td style="border-style: none;text-align: left;">Assessment Location</td>
+                                        <td class="text-end" id="lblLocation" style="font-weight: bold;border-style: none;">location</td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td style="border-style: none;text-align: left;">Client Age &amp; Gender<br></td>
+                                        <td class="text-end" id="lblAgeNGender" style="font-weight: bold;border-style: none;">age n gender</td>
+                                    </tr>
+                                    <tr style="text-align: left;">
+                                        <td style="border-style: none;text-align: left;">Client Diagnosis</td>
+                                        <td class="text-end" id="lblDiagnosis" style="font-weight: bold;border-style: none;">diagnosis</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2 style="border-style: solid;border-top-style: none;border-right-style: none;border-bottom-style: solid;border-left-style: none;color: #000000;">Questions &amp; Answers:</h2>
+                        <h4 id="lblHeading1" style="color: #000000;border-style: none;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 1</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion1" style="font-size: 14px;">question 1</td>
+                                        <td class="text-start" style="font-size: 14px;">Identifies&nbsp;medications, expiration dates and measures accurate dosage (liquid, pills,&nbsp;drops, drawing from a syringe, etc.)<br></td>
+                                        <td class="text-end" id="lblAnswer1" style="font-weight: bold;font-size: 14px;">answer 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion2" style="font-size: 14px;">question 2</td>
+                                        <td class="text-start" style="font-size: 14px;">Opens&nbsp;bottles/packages; administers medication properly; recovers dropped medication.</td>
+                                        <td class="text-end" id="lblAnswer2" style="font-weight: bold;font-size: 14px;">answer 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion3" style="font-size: 14px;">question 3</td>
+                                        <td class="text-start" style="font-size: 14px;">Shopping-locates item&nbsp;and price (visually identifying item or seeking appropriate assistance).<br></td>
+                                        <td class="text-end" id="lblAnswer3" style="font-weight: bold;font-size: 14px;">answer 3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment1" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 1</p>
+                        <h4 id="lblHeading2" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 2</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion4" style="font-size: 14px;">question 4</td>
+                                        <td class="text-start" style="font-size: 14px;">Locate, select,&nbsp;match clothing by color: match outfits appropriately.<br></td>
+                                        <td class="text-end" id="lblAnswer4" style="font-weight: bold;font-size: 14px;">answer 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion5" style="font-size: 14px;">question 5</td>
+                                        <td class="text-start" style="font-size: 14px;">Combs, brushes,&nbsp;styles and washes hair.<br></td>
+                                        <td class="text-end" id="lblAnswer5" style="font-weight: bold;font-size: 14px;">answer 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion6" style="font-size: 14px;">question 6</td>
+                                        <td class="text-start" style="font-size: 14px;">Trims/files&nbsp;fingernails and toenails.<br></td>
+                                        <td class="text-end" id="lblAnswer6" style="font-weight: bold;font-size: 14px;">answer 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion7" style="font-size: 14px;">question 7</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately applies&nbsp;toothpaste, denture cream, thoroughly cleans.<br></td>
+                                        <td class="text-end" id="lblAnswer7" style="font-weight: bold;font-size: 14px;">answer 7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment2" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 2</p>
+                        <h4 id="lblHeading3" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 3</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion8" style="font-size: 14px;">question 8</td>
+                                        <td class="text-start" style="font-size: 14px;">Into properly sized pieces; peel completely; use&nbsp;knives/peelers safely.<br></td>
+                                        <td class="text-end" id="lblAnswer8" style="font-weight: bold;font-size: 14px;">answer 8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion9" style="font-size: 14px;">question 9</td>
+                                        <td class="text-start" style="font-size: 14px;">Select correct&nbsp;measuring utensil; fill accurately with minimal spillage.<br></td>
+                                        <td class="text-end" id="lblAnswer9" style="font-weight: bold;font-size: 14px;">answer 9</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion10" style="font-size: 14px;">question 10</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately locates/selects&nbsp;settings.</td>
+                                        <td class="text-end" id="lblAnswer10" style="font-weight: bold;font-size: 14px;">answer 10</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion11" style="font-size: 14px;">question 11</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;temperature, identifies when burners are on/off, and monitors food when cooking.<br></td>
+                                        <td class="text-end" id="lblAnswer11" style="font-weight: bold;font-size: 14px;">answer 11</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion12" style="font-size: 14px;">question 12</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;temperature, identifies when oven is on/off and monitors food when cooking.</td>
+                                        <td class="text-end" id="lblAnswer12" style="font-weight: bold;font-size: 14px;">answer 12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion13" style="font-size: 14px;">question 13</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately sets&nbsp;washing machine/dryer dials; measures dry and liquid soap; identifies and<br>treats stains.<br></td>
+                                        <td class="text-end" id="lblAnswer13" style="font-weight: bold;font-size: 14px;">answer 13</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment3" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 3</p>
+                        <h4 id="lblHeading4" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 4</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion14" style="font-size: 14px;">question 14</td>
+                                        <td class="text-start" style="font-size: 14px;">Makes legible entries&nbsp;into financial records; organized method&nbsp;to retrieve bills statements.<br></td>
+                                        <td class="text-end" id="lblAnswer14" style="font-weight: bold;font-size: 14px;">answer 14</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion15" style="font-size: 14px;">question 15</td>
+                                        <td class="text-start" style="font-size: 14px;">Locates and accurately identifies company,<br>amount due, and qualifying statements within time period client considers&nbsp;reasonable.<br></td>
+                                        <td class="text-end" id="lblAnswer15" style="font-weight: bold;font-size: 14px;">answer 15</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion16" style="font-size: 14px;">question 16</td>
+                                        <td class="text-start" style="font-size: 14px;">Completes entire form&nbsp;legibly enough for stranger to read; accurate, legible, entry into register; speed<br>sufficient to complete task in community.<br></td>
+                                        <td class="text-end" id="lblAnswer16" style="font-weight: bold;font-size: 14px;">answer 16</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment4" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 4</p>
+                        <h4 id="lblHeading5" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 5</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion17" style="font-size: 14px;">question 17</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately inputs numbers- typing in or using<br>speed dial; retrieves messages; locates/opens desired apps; successfully&nbsp;charges device.<br></td>
+                                        <td class="text-end" id="lblAnswer17" style="font-weight: bold;font-size: 14px;">answer 17</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion18" style="font-size: 14px;">question 18</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately uses personal&nbsp;address book/phone memory function to recall familiar numbers; telephone&nbsp;directory/directory assistance for unfamiliar numbers.<br></td>
+                                        <td class="text-end" id="lblAnswer18" style="font-weight: bold;font-size: 14px;">answer 18</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment5" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 5</p>
+                        <h4 id="lblHeading6" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 6</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion19" style="font-size: 14px;">question 19</td>
+                                        <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information and to select desired choice.<br></td>
+                                        <td class="text-end" id="lblAnswer19" style="font-weight: bold;font-size: 14px;">answer 19</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion20" style="font-size: 14px;">question 20</td>
+                                        <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information/enjoyment from activity.<br></td>
+                                        <td class="text-end" id="lblAnswer20" style="font-weight: bold;font-size: 14px;">answer 20</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion21" style="font-size: 14px;">question 21</td>
+                                        <td class="text-start" style="font-size: 14px;">Able to obtain&nbsp;desired information.<br></td>
+                                        <td class="text-end" id="lblAnswer21" style="font-weight: bold;font-size: 14px;">answer 21</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion22" style="font-size: 14px;">question 22</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately reports card number, expiration date and&nbsp;security code.<br></td>
+                                        <td class="text-end" id="lblAnswer22" style="font-weight: bold;font-size: 14px;">answer 22</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment6" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 6</p>
+                        <h4 id="lblHeading7" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 7</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion23" style="font-size: 14px;">question 23</td>
+                                        <td class="text-start" style="font-size: 14px;">Client can read back&nbsp;later and/or another person can read.<br></td>
+                                        <td class="text-end" id="lblAnswer23" style="font-weight: bold;font-size: 14px;">answer 23</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion24" style="font-size: 14px;">question 24</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately position&nbsp;address; stay on line; writing legible to unfamiliar reader.<br></td>
+                                        <td class="text-end" id="lblAnswer24" style="font-weight: bold;font-size: 14px;">answer 24</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion25" style="font-size: 14px;">question 25</td>
+                                        <td class="text-start" style="font-size: 14px;">Positions signature&nbsp;accurately; stay on line; signature is legally acceptable; completes task in<br>home/ community.<br></td>
+                                        <td class="text-end" id="lblAnswer25" style="font-weight: bold;font-size: 14px;">answer 25</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment7" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 7</p>
+                        <h4 id="lblHeading8" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 8</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion26" style="font-size: 14px;">question 26</td>
+                                        <td class="text-start" style="font-size: 14px;">Safely navigates using&nbsp;safety features- rails, good lighting-in familiar environments.<br></td>
+                                        <td class="text-end" id="lblAnswer26" style="font-weight: bold;font-size: 14px;">answer 26</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion27" style="font-size: 14px;">question 27</td>
+                                        <td class="text-start" style="font-size: 14px;">Negotiates curbs,&nbsp;ramps, transitions between surfaces without stopping, hesitation, probing with<br>cane or asking for assistance.<br></td>
+                                        <td class="text-end" id="lblAnswer27" style="font-weight: bold;font-size: 14px;">answer 27</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion28" style="font-size: 14px;">question 28</td>
+                                        <td class="text-start" style="font-size: 14px;">Safely identifies/walks&nbsp;around objects and obstacles in familiar environments.<br></td>
+                                        <td class="text-end" id="lblAnswer28" style="font-weight: bold;font-size: 14px;">answer 28</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion29" style="font-size: 14px;">question 29</td>
+                                        <td class="text-start" style="font-size: 14px;">Including&nbsp;street signs, names of stores, signs in store windows, etc.<br></td>
+                                        <td class="text-end" id="lblAnswer29" style="font-weight: bold;font-size: 14px;">answer 29</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment8" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 8</p>
+                        <h4 id="lblHeading9" style="color: #000000;border-style: solid;border-top-width: 1px;border-top-style: none;border-right-style: none;border-bottom-width: 1px;border-bottom-style: none;border-left-style: none;">heading 9</h4>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion30" style="font-size: 14px;">question 30</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately&nbsp;shaves face, underarms, legs; trims beard/mustache, plucks eyebrows.<br></td>
+                                        <td class="text-end" id="lblAnswer30" style="font-weight: bold;font-size: 14px;">answer 30</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion31" style="font-size: 14px;">question 31</td>
+                                        <td class="text-start" style="font-size: 14px;">Completes with&nbsp;sufficient speed, accuracy, effort that the activity is enjoyable.<br></td>
+                                        <td class="text-end" id="lblAnswer31" style="font-weight: bold;font-size: 14px;">answer 31</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion32" style="font-size: 14px;">question 32</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately&nbsp;locates/selects settings:&nbsp; radio/ipod/phone/TV/remote controls; changes<br>batteries for devices.<br></td>
+                                        <td class="text-end" id="lblAnswer32" style="font-weight: bold;font-size: 14px;">answer 32</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start" id="lblQuestion33" style="font-size: 14px;">question 33</td>
+                                        <td class="text-start" style="font-size: 14px;">Accurately reads at&nbsp;least one portable or stationary timepiece in home and community environments.<br></td>
+                                        <td class="text-end" id="lblAnswer33" style="font-weight: bold;font-size: 14px;">answer 33</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment9" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 9</p>
+                        <h2 id="lblHeading10" style="border-bottom-style: solid;color: #000000;">Scores:</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <td class="text-start">Total&nbsp;questions&nbsp;marked&nbsp;NA<br></td>
+                                        <td class="text-end" id="lblTNA" style="font-weight: bold;">score 1</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Total&nbsp;uncalculated&nbsp;points<br></td>
+                                        <td class="text-end" id="lblTUNC" style="font-weight: bold;">score 2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Total&nbsp;adjusted&nbsp;points<br></td>
+                                        <td class="text-end" id="lblTADJ" style="font-weight: bold;">score 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Total&nbsp;client&nbsp;points<br></td>
+                                        <td class="text-end" id="lblTCLI" style="font-weight: bold;">score 4</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Score R-SRAFVP<br></td>
+                                        <td class="text-end" id="lblSR" style="font-weight: bold;">score 5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Score % Impairment<br></td>
+                                        <td class="text-end" id="lblSI" style="font-weight: bold;">score 6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-start">Medicare G Code<br></td>
+                                        <td class="text-end" id="lblSM" style="font-weight: bold;">score 7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p id="lblComment10" style="color: #000000;border-bottom-width: 1px;border-bottom-style: solid;">comment 10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="assets/js/class_assessment.js"></script>
+    <script src="assets/js/firebase-app-compat.js"></script>
+    <script src="assets/js/firebase-analytics-compat.js"></script>
+    <script src="assets/js/firebase-auth-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
+    <script src="assets/js/class_assessment.js"></script>
+    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/myassessment.js"></script>
     <script src="assets/js/print.min.js"></script>
-    <script src="assets/js/require.js"></script>
     <script src="assets/js/whoami.js"></script>
+    <script src="assets/js/firebase-firestore-compat.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="assets/js/mylisting.js"></script>
 </body>
 
 </html>

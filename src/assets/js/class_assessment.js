@@ -1,26 +1,5 @@
 class Assessment {
-
-    date = new Date();
-    type = String;
-    state = String;
-    country = String;
-    therapist = String;
-    clientRef = String;
-    clientAge = Number;
-    clientGender = String;
-    clientDiagnosis = String;
-    headings = Array[11];
-    questions = Array[34];
-    answers = Array[34];
-    comments = Array[11];
-    scoreTotalNA = Number;
-    scoreTotalUncalcd = Number;
-    scoreTotalAdjd = Number;
-    scoreTotalClient = Number;
-    scoreRSRAFVP = Number;
-    scoreImpairment = Number;
-    scoreMedicare = String;
-		
+    
 	constructor() {
         this.date = new Date();
         this.type = "Initial";  // Selector does not set initial value

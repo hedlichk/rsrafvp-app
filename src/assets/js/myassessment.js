@@ -1,11 +1,6 @@
 //  Global Variables
 var activeAssessment = new Assessment;
-
-//  Open first tab by default
-window.onload = document.getElementById("tabInfo").click();
-
-//  Opening PDF modal, update the data in the modal
-window.onfocus = document.getElementById("modalExport").addEventListener("focusin", updatePDFPreview);
+var user = localStorage.userName;
 
 //  Assessment Tab 1 field listeners
 document.getElementById("fldTherapist").addEventListener("focusout",assessmentTherapist);
@@ -54,18 +49,18 @@ document.getElementById("A31").addEventListener("focusout",assessmentAnswers);
 document.getElementById("A32").addEventListener("focusout",assessmentAnswers);
 document.getElementById("A33").addEventListener("focusout",assessmentAnswers);
 
-document.getElementById("noteHealth").addEventListener("focusout",assessmentNote);
-document.getElementById("notePersonal").addEventListener("focusout",assessmentNote);
-document.getElementById("noteMealPrep").addEventListener("focusout",assessmentNote);
-document.getElementById("noteFinancial").addEventListener("focusout",assessmentNote);
-document.getElementById("noteReading").addEventListener("focusout",assessmentNote);
-document.getElementById("noteWriting").addEventListener("focusout",assessmentNote);
-document.getElementById("noteFunctional").addEventListener("focusout",assessmentNote);
-document.getElementById("notePPA").addEventListener("focusout",assessmentNote);
+document.getElementById("noteHealth").addEventListener("focusout",assessmentComments);
+document.getElementById("notePersonal").addEventListener("focusout",assessmentComments);
+document.getElementById("noteMealPrep").addEventListener("focusout",assessmentComments);
+document.getElementById("noteFinancial").addEventListener("focusout",assessmentComments);
+document.getElementById("noteReading").addEventListener("focusout",assessmentComments);
+document.getElementById("noteWriting").addEventListener("focusout",assessmentComments);
+document.getElementById("noteFunctional").addEventListener("focusout",assessmentComments);
+document.getElementById("notePPA").addEventListener("focusout",assessmentComments);
 
 //  Assessment Tab 3 field listeners
 document.getElementById("tabScore").addEventListener("click", scoreAssessment);
-document.getElementById("noteOverall").addEventListener("focusout",assessmentNote);
+document.getElementById("noteOverall").addEventListener("focusout",assessmentComments);
 
 //  Assessment button listeners
 document.getElementById("btnConfirmReset").addEventListener("click", resetAssessment);
@@ -73,15 +68,30 @@ document.getElementById("btnCSVExport").addEventListener("click", exportCSVAsses
 document.getElementById("btnPDFExport").addEventListener("click", exportPDFAssessment);
 document.getElementById("btnConfirmSave").addEventListener("click", saveAssessment);
 
-function defaultTab() {
-    $("#tabs").tabs({
-        active: 0,
-        activate: function (event, ui) {
-          var active = $('#tabs-1').tabs('option', 'active');
-          $("#tabid").html($("#tabs ul>li a").eq(active).attr("href"));
-        }        
-    });
+
+function Prep() {
+  
+    //  Open first tab by default
+    document.getElementById("tabInfo").click();
+
+    //  Check if user is logged in
+    //  - if NO  - disable SAVE
+    //  - if YES - fill in Therapist and enable SAVE
+    if ((user == null) || (user == "Guest") || (user =="")) {
+        //  Disable the Save button
+        document.getElementById("btnSave").disabled = true;
+    }    
+    else {
+        //  Set therapist field value if logged in
+        document.getElementById("fldTherapist").value = localStorage.userName;
+        document.getElementById("fldTherapist").innerHTML = localStorage.userName;
+        
+        //  Set assessment therapist value if logged in
+        activeAssessment.therapist = localStorage.userName;
+    }
+ 
 }
+
 
 //  Tab 1 functions to populate class data
 
@@ -94,7 +104,14 @@ function assessmentClientRef() {
 };
 
 function assessmentDate() { 
-    activeAssessment.date = Date(document.getElementById("fldAssessDate").value);
+
+    var date = document.getElementById("fldAssessDate").value;
+    
+    //  Test if date field value is a date and not blank
+    if (!isNaN((new Date(date)))) {
+        activeAssessment.date = new Date(date);
+    }
+    
 };
 
 function assessmentType() { 
@@ -168,7 +185,7 @@ function assessmentAnswers() {
     activeAssessment.answers[33] = document.getElementById("A33").value;
 };
 
-function assessmentNote() { 
+function assessmentComments() { 
     
     activeAssessment.comments[1] = document.getElementById("noteHealth").value;
     activeAssessment.comments[2] = document.getElementById("notePersonal").value;
@@ -246,9 +263,6 @@ function setSessionStorage() {
     sessionStorage.setItem("scoreRSRAFVP",activeAssessment.scoreRSRAFVP);
     sessionStorage.setItem("scoreImpairment",activeAssessment.scoreImpairment);
     sessionStorage.setItem("scoreMedicare",activeAssessment.scoreMedicare);
-
-    console.log("setting the session storage");
-    console.log(sessionStorage);
 }
 
 function resetAssessment() { 
@@ -262,13 +276,12 @@ function resetAssessment() {
 function updatePDFPreview() { 
 
     var datetime = new Date(sessionStorage.getItem("sessionAssessDate"));
-    var datetimeString = datetime.getMonth() + "/" + datetime.getDate() + "/" + datetime.getFullYear();
     var location = sessionStorage.getItem("sessionState") + " / " + sessionStorage.getItem("sessionCountry");
     var ageNGender = sessionStorage.getItem("sessionAge") + " / " + sessionStorage.getItem("sessionGender");
     
     document.getElementById("lblTherapist").innerHTML = sessionStorage.getItem("sessionTherapist");
     document.getElementById("lblClientRef").innerHTML = sessionStorage.getItem("sessionClientRef");
-    document.getElementById("lblDate").innerHTML = datetimeString;
+    document.getElementById("lblDate").innerHTML = datetime.toDateString();
     document.getElementById("lblType").innerHTML = sessionStorage.getItem("sessionType");
     document.getElementById("lblLocation").innerHTML = location;
     document.getElementById("lblAgeNGender").innerHTML = ageNGender;
@@ -315,10 +328,11 @@ function updatePDFPreview() {
 };
 
 function exportCSVAssessment() { 
-       
+    
     var filename = createFilename() + ".csv";
 
     var csvObj = activeAssessment.createCSVExport();
+
     var exportFile = new File([csvObj], filename, {type: "text/plain;charset=utf-8"});
     saveAs(exportFile);
 
@@ -326,43 +340,101 @@ function exportCSVAssessment() {
 
 function exportPDFAssessment() { 
 
-    var filename = createFilename() + ".pdf";
+    var filename = createCollectionName("file") + ".pdf";
+
+    document.title = filename;
 
     printJS({
-        documentTitle: filename,
         printable: 'formExport', type: 'html',
-        documentTitle: filename
     });
 };
 
 function saveAssessment() { 
-    
-    var filename = createFilename() + ".json";
-    var jsonObj = JSON.stringify(activeAssessment.createJSONExport());
-    var exportFile = new File([jsonObj], filename, {type: "text/plain;charset=utf-8"});
-    saveAs(exportFile);
-};
 
-function createFilename() {
-    
-    //  Use Assessment date, therapist, client ref and assessment type for filename
+    var currentUser = sessionStorage.getItem("userName");
+    var collectionName = createCollectionName("db");
 
-    var datename = new Date(sessionStorage.getItem("sessionAssessDate"));
-    var datenameString = datename.getFullYear() +"." + datename.getMonth() + "." + datename.getDate();
+    var ok = authorized(currentUser);
+        
+    const db = firebase.firestore();
+    var jsonObj = activeAssessment.createJSONExport();
 
-    var therapist = activeAssessment.therapist;
-    var client = activeAssessment.clientRef;
-    var type = activeAssessment.type;
+    //  Check the user is authorized
+    if (ok) {
 
-    if ( therapist == "") {
-        therapist = "therapist";
-    }
-    if (client == "") {
-        client = "clientReference";
+        var jsonObj = activeAssessment.createJSONExport();
+
+        db.collection("assessments").doc(currentUser).collection(collectionName).add(jsonObj).then(function(docRef) {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch(function(error) {
+            console.error("Error adding document: ", error);
+        });
     }
 
-    var filename = (datenameString + "_" + therapist + "_" + client + "_" + type);
-    
-    return filename;
-    
 };
+
+
+function createCollectionName(kind) {
+    
+    //  Get the assessment date for the name    
+    var date = new Date(sessionStorage.getItem("sessionAssessDate"));
+
+    // Format the date string
+    var monOptions = { month: 'short'};
+    var year = date.getFullYear();
+    var month = new Intl.DateTimeFormat('en-US', monOptions).format(date);
+    var day = date.getDate();
+    var dateString = year + "-" + month + "-" + day;
+
+    // Format the time string
+    var timeString = date.getHours() + "." + date.getMinutes() + "." + date.getSeconds();
+        
+    //  Use Assessment therapist, client ref and assessment type for filename
+    var therapist = sessionStorage.getItem("sessionTherapist");
+    var client = sessionStorage.getItem("sessionClientRef");
+    var type = sessionStorage.getItem("sessionType");
+
+    if (( therapist == "") || ( therapist == "---"))  {
+        therapist = "Therapist";
+    }
+    if (( client == "") || ( client == "---")) {
+        client = "Client";
+    }
+
+    var collectionName = "error";
+
+    if (kind == "db") {
+        var collectionName = (dateString + " " + timeString + " " + client + " " + type);
+    }
+    if (kind == "file") {
+        var collectionName = (dateString + "_" + timeString + "_" + therapist + "_" + client + "_" + type);
+    }
+    
+    return collectionName;
+};
+
+function authorized(username) {
+
+    if (username == "") {
+        return false;
+    }
+    if (username == null) {
+        return false;
+    }
+    if (username == "Guest") {
+        return false;
+    }
+    return true;
+
+}
+
+
+//  Opening PDF modal, update the data in the modal
+window.onfocus = document.getElementById("modalExport").addEventListener("focusin", updatePDFPreview);
+
+
+window.addEventListener("load", function() {
+
+    Prep();
+})

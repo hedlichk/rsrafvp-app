@@ -1,43 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="index" lang="en" screenname="index">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>rsrafvp</title>
+    <title>R-SRAFVP</title>
     <meta name="theme-color" content="#264391">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/rsrafvp-icon-32.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/rsrafvp-icon-192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/rsrafvp-icon-512.png">
+    <meta name="description" content="Revised Self Reporting Assessment of Functional Visual Performance">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/RSRAFVPLogos/rsrafvp_logo_32.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="assets/img/RSRAFVPLogos/rsrafvp_logo_152.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/RSRAFVPLogos/rsrafvp_logo_192.png">
+    <link rel="icon" type="image/png" sizes="511x511" href="assets/img/RSRAFVPLogos/rsrafvp_logo_512.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/print.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body class="text-center" style="color: #ffffff;background: #264391;">
-    <div class="container" style="max-width: 768px;min-width: 360px;"><img class="d-inline justify-content-center" src="assets/img/rsrafvp-icon-256.png" style="text-align: center;padding-top: 36px;padding-bottom: 0px;">
-        <div class="row justify-content-evenly align-items-center" style="margin-bottom: 8px;">
-            <div class="col align-self-center" style="min-width: 360px;max-width: 360px;">
-                <p class="border rounded-pill" data-aos="fade" data-aos-duration="1000" data-aos-delay="3000" style="color: #000000;font-size: 20px;font-weight: bold;border-radius: 20px;text-align: center;margin-top: 8px;margin-bottom: 8px;background: #ffffff;">Tap to continue</p>
-            </div>
-        </div>
-        <h2 class="text-center" style="padding: 0px;">Revised</h2>
+    <div class="container" style="max-width: 768px;min-width: 360px;" title="splash"><img class="d-inline justify-content-center" src="assets/img/RSRAFVPLogos/rsrafvp_logo_256.png" style="text-align: center;margin-top: 5%;"><button class="btn btn-primary" data-aos="fade" data-aos-duration="1000" data-aos-delay="3000" id="btnSplashContinue" type="button" style="min-width: 40%;max-width: 40%;margin-right: 20%;margin-left: 20%;margin-bottom: 3%;margin-top: 3%;font-weight: bold;background: var(--bs-light);color: var(--bs-gray-900);border-top-left-radius: 8px;border-top-right-radius: 8px;border-bottom-right-radius: 8px;border-bottom-left-radius: 8px;">Tap to continue ...</button>
+        <h2 class="text-center" style="padding: 0px;">The Revised</h2>
         <h2 class="text-center">Self-Report Assessment</h2>
         <h2 class="text-center">of Functional</h2>
         <h2 class="text-center">Visual Performance</h2>
-        <p class="text-center" style="padding: 36px 0px 0px 0px;">Version: Oct 13, 2021 - pre-beta</p>
+        <h2 class="text-center">Application</h2>
+        <p class="text-center" id="fldReleaseVersion" style="padding: 36px 0px 0px 0px;font-size: 20px;">{version}</p>
+        <div class="modal fade" role="dialog" tabindex="-1" id="mdlWhatsNew">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" style="color: #264391;">What's New in Version 2!</h3><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p style="color: #264391;text-align: left;">New navigation icons to get to the important pages quickly.</p>
+                        <p style="color: #264391;text-align: left;">Simplified navigation: get to the main assessment page easily.</p>
+                        <p style="color: #264391;text-align: left;">Unified navigation bar across all pages.</p>
+                        <p style="color: #264391;text-align: left;">Consolidated HELP pages.</p>
+                        <p style="color: #264391;text-align: left;">Ability to login.</p>
+                    </div>
+                    <div class="modal-footer"><button class="btn" id="btnCloseWhatsNew" type="button" data-bs-dismiss="modal" style="font-weight: bold;background: var(--bs-gray-500);">Close</button></div>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/firebase-app-compat.js"></script>
+    <script src="assets/js/firebase-analytics-compat.js"></script>
+    <script src="assets/js/firebase-auth-compat.js"></script>
+    <script src="assets/js/firebase.js"></script>
     <script src="assets/js/index.js"></script>
-    <script src="assets/js/print.min.js"></script>
-    <script src="assets/js/require.js"></script>
+    <script src="assets/js/navbar.js"></script>
     <script src="assets/js/sw.js"></script>
+    <script src="assets/js/firebase-firestore-compat.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="assets/js/mylisting.js"></script>
 </body>
 
 </html>
